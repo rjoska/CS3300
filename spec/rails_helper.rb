@@ -1,5 +1,9 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+
+#fact bot
+require 'factory_bot'
+
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
@@ -29,8 +33,8 @@ end
 # of increasing the boot-up time by auto-requiring all files in the support
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
-#
-# Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+#Uncommented in Iteration 5
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -42,7 +46,11 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
+    # Add these
+    config.include Devise::Test::ControllerHelpers, :type => :controller
+    config.include Devise::Test::IntegrationHelpers, :type => :feature
+    config.include FactoryBot::Syntax::Methods
+    config.extend ControllerMacros, :type => :controller
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
@@ -71,3 +79,19 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+
+#FactoryBot.define do
+  
+  #factory :user do
+   # email { "test7@gmail.cons" }
+   # password { "ImadeThat" }
+    #password_confirmation { "ImadeThat" }
+  #end
+
+  #factory :user2 do
+   # email { "test12@gmail.gov" }
+   # password { "ImadeThat" }
+   # password_confirmation { "ImadeThat" }
+  #end
+#end

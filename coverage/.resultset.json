@@ -1,6 +1,23 @@
 {
   "RSpec": {
     "coverage": {
+      "/root/CS3300/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/root/CS3300/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/root/CS3300/app/helpers/application_helper.rb": {
         "lines": [
           1,
@@ -15,6 +32,7 @@
       },
       "/root/CS3300/app/controllers/projects_controller.rb": {
         "lines": [
+          1,
           1,
           1,
           null,
@@ -93,15 +111,32 @@
           null
         ]
       },
-      "/root/CS3300/app/models/application_record.rb": {
+      "/root/CS3300/app/models/project.rb": {
         "lines": [
-          1,
           1,
           null
         ]
       },
-      "/root/CS3300/app/models/project.rb": {
+      "/root/CS3300/app/controllers/turbo_devise_controller.rb": {
         "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
           1,
           null
         ]
@@ -150,6 +185,6 @@
         }
       }
     },
-    "timestamp": 1667754481
+    "timestamp": 1669235886
   }
 }
