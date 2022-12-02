@@ -1,8 +1,37 @@
-<h1>New project</h1>
-
-<%= render "form", project: @project %>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/" style="font-size 16px;">Home</a>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item" style="font-size 16px;">
+          <a class="nav-link" href="projects/new">New Project</a>
+        </li>
+        <li class="nav-item" style="font-size 16px;">
+            <a class="nav-link" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
+        </li>
+      <%else%>
+        <li class="nav-item" style="font-size 16px;">
+          <a class="nav-link" href="/users/sign_in">Sign In</a>
+        </li>
+        <li class="nav-item" style="font-size 16px;">
+          <a class="nav-link" href="/users/sign_up">Sign Up</a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav> 
 
 <br>
+<center>
+<h1>New project</h1>
+<div class="card text-white bg-success mb-3 centerPage" style="max-width: 32rem;">
+    <div class="card-body">
+    <%= render "form", project: @project %>
+    </div>
+  </div>
+<center>
 
 <div>
   <%= link_to "Back to projects", projects_path %>

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+/*
+Custom bootstrap variables must be set or imported *before* bootstrap.
+*/
+@import "bootstrap";
+
+.text-truncate-2 {
+    -webkit-line-clamp: 2;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
