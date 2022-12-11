@@ -8,8 +8,8 @@
         <li class="nav-item" style="font-size 16px;">
           <a class="nav-link" href="projects/new">New Project</a>
         </li>
-        <li class="nav-item" style="font-size 16px;">
-          <%= button_to "Sign out", destroy_user_session_path, method: :delete  %>
+        <li class="nav-item" style="font-size 16px;" data-method="delete">
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-dark' %>
         </li>
       <%else%>
         <li class="nav-item" style="font-size 16px;">
